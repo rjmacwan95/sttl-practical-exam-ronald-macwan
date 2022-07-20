@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/menu_filter"
+        android:title="@string/filter_menu_text"
+        app:icon="@drawable/filter"
+        android:icon="@drawable/filter"
+        app:showAsAction="collapseActionView|ifRoom"/>
+
+    <item android:id="@+id/menu_search"
+        android:title="@string/search_menu_text"
+        app:icon="@drawable/search"
+        android:icon="@drawable/search"
+        app:showAsAction="collapseActionView|ifRoom"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"/>
+</menu>

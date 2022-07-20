@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group
+        android:id="@+id/nav_home_group"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_add_category"
+            android:title="@string/menu_add_category" />
+    </group>
+
+    <group android:id="@+id/nav_gallery_group"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_add_contact"
+            android:title="@string/menu_add_contact" />
+    </group>
+    <group android:id="@+id/nav_slideshow_group"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_contact_list"
+            android:title="@string/menu_contact_list" />
+    </group>
+</menu>
