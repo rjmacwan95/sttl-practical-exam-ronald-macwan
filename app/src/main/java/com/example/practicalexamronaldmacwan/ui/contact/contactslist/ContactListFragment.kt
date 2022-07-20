@@ -108,8 +108,6 @@ class ContactListFragment : Fragment(), SearchView.OnQueryTextListener, MenuProv
         } else {
             findNavController().navigate(R.id.action_nav_contact_list_to_nav_add_contact)
         }
-
-
     }
 
 
