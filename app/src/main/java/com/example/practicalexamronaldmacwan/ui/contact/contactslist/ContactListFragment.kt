@@ -66,9 +66,7 @@ class ContactListFragment : Fragment(), SearchView.OnQueryTextListener, MenuProv
         categoryViewModel =
             ViewModelProvider(requireActivity(), factory).get(AddCategoryViewModel::class.java)
         binding.contactViewModel = contactViewModel
-        binding.lifecycleOwner = this
-
-        binding.lifecycleOwner = this
+        binding.lifecycleOwner = requireActivity()
 
         contactViewModel.message.observe(viewLifecycleOwner) {
             it.getContentIfNotHandled()?.let { it ->
@@ -107,9 +105,10 @@ class ContactListFragment : Fragment(), SearchView.OnQueryTextListener, MenuProv
         contactViewModel.initUpdateAndDelete(contact)
         if (isDelete) {
             contactViewModel.deleteContact(contact)
+        } else {
+            findNavController().navigate(R.id.action_nav_contact_list_to_nav_add_contact)
         }
 
-        findNavController().navigate(R.id.action_nav_contact_list_to_nav_add_contact)
 
     }
 
